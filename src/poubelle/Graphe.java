@@ -214,6 +214,52 @@ public class Graphe
 		return res;
 	}
 	
+	public String toDot(int i)
+	{
+		String s="N"+i+" [label=\"N"+i+":V=7\n";
+		String res = graphe.replaceAll("\\n", "\\\\n");
+		s+= res;
+		s+="\"]";
+		return s;
+	}
+	
+	
+	
+	public String getGraphe() 
+	{
+		return graphe;
+	}
+
+
+	public void setGraphe(String graphe)
+	{
+		this.graphe = graphe;
+	}
+
+
+	public int getLongueur()
+	{
+		return longueur;
+	}
+
+
+	public void setLongueur(int longueur) 
+	{
+		this.longueur = longueur;
+	}
+
+
+	public int getLargeur() 
+	{
+		return largeur;
+	}
+
+
+	public void setLargeur(int largeur) 
+	{
+		this.largeur = largeur;
+	}
+	
 	public static void main (String [] args){
 		Graphe a = new Graphe(4,4,1);
 		System.out.print(a.graphe);
